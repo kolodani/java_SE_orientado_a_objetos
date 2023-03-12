@@ -42,4 +42,11 @@ public class Patient {
     public String getPhoneNumber() {
         return phoneNumber;
     }
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
 }

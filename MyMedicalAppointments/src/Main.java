@@ -8,10 +8,22 @@ public class Main {
         System.out.println(myDoctor.speciality);
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-        patient.setWeight(54.6);
-        System.out.println(patient.getWeight());
+        Patient patient2 = new Patient("Anahi", "anahi@mail.com");
 
-        patient.setPhoneNumber("12345678");
-        System.out.println(patient.getPhoneNumber());
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+        patient2 = patient;
+
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+
+        patient2.setName("Manuel");
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+        // patient.setWeight(54.6);
+        // System.out.println(patient.getWeight());
+
+        // patient.setPhoneNumber("12345678");
+        // System.out.println(patient.getPhoneNumber());
     }
 }
