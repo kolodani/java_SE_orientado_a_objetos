@@ -13,7 +13,33 @@ public class Patient {
     public Patient(String name, String email) {
         this.name = name;
         this.email = email;
-        this.weight = 54.5;
-        System.out.println(weight + "Kg.");
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public String getWeight() {
+        return this.weight + " Kg.";
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public String getHeight() {
+        return this.height + " Mts.";
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        if (phoneNumber.length() > 8) {
+            System.out.println("El numero telefonico debe ser de 8 digitos maximo");
+        } else if (phoneNumber.length() == 8) {
+            this.phoneNumber = phoneNumber;
+        }
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }
