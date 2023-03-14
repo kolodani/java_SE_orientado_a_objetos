@@ -1,29 +1,31 @@
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
 
         // showMenu();
 
         Doctor myDoctor = new Doctor("Anahi Salgado", "Pediatria");
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.speciality);
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "10am");
+        myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-        Patient patient2 = new Patient("Anahi", "anahi@mail.com");
+        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
+            System.out.println(aA.getDate() + " " + aA.getTime());
+        }
 
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-        patient2 = patient;
+        // Patient patient = new Patient("Alejandra", "alejandra@mail.com");
+        // Patient patient2 = new Patient("Anahi", "anahi@mail.com");
 
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
+        // System.out.println(patient.getName());
+        // System.out.println(patient2.getName());
+        // patient2 = patient;
 
-        patient2.setName("Manuel");
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-        // patient.setWeight(54.6);
-        // System.out.println(patient.getWeight());
+        // System.out.println(patient.getName());
+        // System.out.println(patient2.getName());
 
-        // patient.setPhoneNumber("12345678");
-        // System.out.println(patient.getPhoneNumber());
+        // patient2.setName("Manuel");
+        // System.out.println(patient.getName());
+        // System.out.println(patient2.getName());
     }
 }
