@@ -5,17 +5,19 @@ public class Main {
 
         // showMenu();
 
-        Doctor myDoctor = new Doctor("Anahi Salgado", "Pediatria");
+        Doctor myDoctor = new Doctor("Anahi Salgado", "anahi@mail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
-            System.out.println(aA.getDate() + " " + aA.getTime());
-        }
+        System.out.println(myDoctor);
+
+        // for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointments()) {
+        //     System.out.println(aA.getDate() + " " + aA.getTime());
+        // }
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-        
+
         System.out.println(patient);
     }
 }
