@@ -44,7 +44,6 @@ public class Patient extends User {
 
     @Override
     public String toString() {
-        return super.toString() + "\nAge: " + birthday + "\nWeight: " + getWeight()
-                + "\nHeight: " + getHeight() + "\nBlood: " + blood;
+        return super.toString() + "\nAge: " + birthday + "\nWeight: " + getWeight() + "\nHeight: " + getHeight() + "\nBlood: " + blood;
     }
 }
