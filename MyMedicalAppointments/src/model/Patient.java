@@ -1,4 +1,5 @@
 package model;
+
 public class Patient extends User {
     // Atributos
     private String birthday;
@@ -45,6 +46,13 @@ public class Patient extends User {
 
     @Override
     public String toString() {
-        return super.toString() + "\nAge: " + birthday + "\nWeight: " + getWeight() + "\nHeight: " + getHeight() + "\nBlood: " + blood;
+        return super.toString() + "\nAge: " + birthday + "\nWeight: " + getWeight() + "\nHeight: " + getHeight()
+                + "\nBlood: " + blood;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Historial completo desde nacimiento");
     }
 }
