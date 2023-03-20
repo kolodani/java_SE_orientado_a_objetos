@@ -25,7 +25,6 @@ public class Doctor extends User {
 
     // Comportamientos
 
-
     public void addAvailableAppointment(String date, String time) {
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
     }
